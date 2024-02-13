@@ -596,7 +596,7 @@ summary:focus {
   }
   .home__title {
     top: -4rem;
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
   }
   .home__data {
     padding-top: 1rem;
