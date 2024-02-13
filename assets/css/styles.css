@@ -291,6 +291,8 @@ img {
   border-radius: .5rem;
   border: red;
   transition: .3s;
+  
+  
 }
 
 .button:hover {
@@ -300,6 +302,7 @@ img {
 
 .button__icon {
   font-size: 1.2rem;
+ 
   
 }
 
@@ -466,7 +469,7 @@ summary:focus {
 .discount__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-75);
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
 
 .discount__description {
@@ -605,7 +608,7 @@ summary:focus {
     font-size: var(--small-font-size);
   }
   .specs__img {
-    width: 200px;
+    width: 100px;
     top: 1.6rem;
     left: 2rem;
   }
