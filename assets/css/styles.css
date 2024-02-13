@@ -18,7 +18,7 @@
   --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 5rem;
+  --biggest-font-size: 4rem;
   --bigger-font-size: 3.5rem;
   --big-font-size: 2.5rem;
   --h2-font-size: 1.25rem;
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 7.5rem;
+    --biggest-font-size: 4.5rem;
     --bigger-font-size: 4.5rem;
     --big-font-size: 4rem;
     --h2-font-size: 1.5rem;
@@ -250,9 +250,9 @@ img {
 .home__title {
   position: absolute;
   top: -4rem;
-  left: 1rem;
+  left: 0rem;
   line-height: 6rem;
-  font-size: var(--biggest-font-size);
+  font-size: 2.5rem;
   background: var(--text-gradient);
   color: rgb(253, 22, 22);
   -webkit-background-clip: text;
@@ -300,6 +300,7 @@ img {
 
 .button__icon {
   font-size: 1.2rem;
+  
 }
 
 .button--flex {
@@ -358,31 +359,121 @@ img {
   top: 2rem;
   right: -4rem;
 }
+/* DROPDOWN */
+faq-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12em;
+  max-width: 600px;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: var(--background);
+}
 
+details {
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+  background-color: var(--background-hover);
+}
+
+details:hover svg {
+  stroke: var(--primary-blue);
+}
+
+details[open] {
+  background-color: var(--background-hover);
+}
+
+details[open] .faq-title {
+  color: var(--primary-blue);
+}
+
+summary {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  list-style: none;
+  padding: 1em;
+  align-items: center;
+}
+
+summary svg {
+  stroke: var(--white);
+}
+
+details[open] summary svg {
+  stroke: var(--primary-blue);
+  transform: rotate(90deg);
+}
+
+summary:hover .faq-title {
+  color: var(--primary-blue);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+
+
+.faq-title {
+  color: var(--white);
+  width: 90%;
+  transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+  color: var(--white);
+  padding: 0.2em 1em 1em 1em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.expand-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 1em;
+  transition: all 150ms ease-out;
+}
+.list{
+  list-style-type: circle;
+}
 /* 
 /*=============== DISCOUNT ===============*/
 .discount__container {
   position: relative;
   background-color: var(--container-color);
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   border-radius: .75rem;
+  
 }
 
 .discount__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-75);
+  margin-left: 4rem;
 }
 
 .discount__description {
   margin-bottom: var(--mb-1);
+  margin-left: 4rem;
 }
 
-.discount__img {
-  width: 300px;
-  position: absolute;
-  top: 4rem;
-  right: -11rem;
-}
 
 /*=============== FOOTER ===============*/
 .footer__container {
@@ -505,7 +596,7 @@ img {
   }
   .home__title {
     top: -4rem;
-    font-size: var(--bigger-font-size);
+    font-size: var(--small-font-size);
   }
   .home__data {
     padding-top: 1rem;
@@ -515,6 +606,8 @@ img {
   }
   .specs__img {
     width: 200px;
+    top: 1.6rem;
+    left: 2rem;
   }
   .case__container {
     grid-template-columns: .6fr 1fr;
@@ -538,6 +631,7 @@ img {
   .home__container {
     grid-template-columns: .8fr 1fr;
   }
+  
   .home__data {
     padding-top: 2rem;
   }
@@ -583,6 +677,7 @@ img {
   body {
     margin: 0;
   }
+  
   .section {
     padding: 6rem 0 2rem;
   }
