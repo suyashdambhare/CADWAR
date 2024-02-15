@@ -72,7 +72,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  border: red solid 5px;
+  border: rgb(25, 231, 42) solid 4px;
 }
 
 h1, h2, h3 {
@@ -155,7 +155,7 @@ img {
 
 .nav__logo {
   display: flex;
-  width: 1.5rem;
+  width: 6rem;
 }
 
 .nav__toggle {
@@ -254,26 +254,46 @@ img {
   line-height: 6rem;
   font-size: 2.5rem;
   background: var(--text-gradient);
-  color: rgb(253, 22, 22);
+  color: rgb(240, 231, 231);
   -webkit-background-clip: text;
   background-clip: text;
   
 }
 
 .home__subtitle {
-  font-size: var(--big-font-size);
+  font-size: 2.1rem;
   margin-bottom: var(--mb-2-5);
+  color: red;
 }
 
 .home__title-description {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
+  font-size: 3rem;
   margin-bottom: var(--mb-1);
+  font-weight: bolder;
+  background: linear-gradient(to right,rgba(0,168,253),#ffff 35%,#e00a95);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s linear infinite;
+
+}
+@keyframes gradient{
+  0%{
+    background-position: 0% 75%;
+  }
+  50%{
+    background-position: 100% 50%;
+    
+  }
+  100%{
+    background-position: 0% 70%;
+  }
 }
 
 .home__description {
   margin-bottom: var(--mb-2-5);
   line-height: var(--text-line-height);
+  color: #FFF;
 }
 
 .home__price {
@@ -298,6 +318,9 @@ img {
 .button:hover {
   background-color: rgb(238, 5, 5);
   border: black;
+  box-shadow: 0px 0px 5px #d40e0e,
+  0px 0px 30px #fe2121,
+  0px 0px 90px #fe2121;
 }
 
 .button__icon {
@@ -516,15 +539,20 @@ summary:focus {
 
 .footer__social-link {
   display: inline-flex;
+  position: relative;
+  align-items: center;
   color: var(--white-color);
-  background-color: var(--container-color);
+  background-color: #ffff;
+  color: black;
   padding: .5rem;
   border-radius: .25rem;
+  margin-left: 5rem;
   font-size: 1rem;
 }
 
 .footer__social-link:hover {
   background-color: var(--black-color);
+  color: #FFF;
 }
 
 .footer__copy {
@@ -536,6 +564,90 @@ summary:focus {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
+.social ul{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social li{
+  list-style: none;
+  display: inline-block;
+  font-size: 23px;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.social{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.instagram{
+  border: 2px solid #ff0095;
+  color: #c72b7e;
+}
+
+.linkedin{
+  border: 2px solid #1c9ff1;
+  color: #1c9ff1;
+}
+
+.gmail{
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  rotate: 90deg;
+}
+
+
+
+/* #####################  Hover EFFECTS ############################# */
+
+.icon{
+  transition: 0.6s;
+}
+
+
+ li:hover .icon1{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #ff0095;
+}
+
+li:hover .icon2{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #1c9ff1;
+}
+
+li:hover .icon3{
+  transform: rotateY(360deg);
+  text-shadow: 0px 0px 1px #ff0000;
+}
+
+
+.social li{
+  transition: 0.4s;
+  transition-delay: 0.2s;
+}
+
+.instagram:hover{
+  box-shadow: 0px 0px 7px #ff0095 inset,
+              0px 0px 7px #ff0095;
+}
+
+.linkedin:hover{
+  box-shadow: 0px 0px 7px #1c9ff1 inset,
+              0px 0px 7px #1c9ff1;
+}
+
+.gmail:hover{
+  box-shadow: 0px 0px 7px #ff0000 inset,
+              0px 0px 7px #ff0000;
+}
+
 
 /*=============== SCROLL UP ===============*/
 .scrollup {
@@ -759,6 +871,9 @@ summary:focus {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+  .nav__logo{
+    width: 7rem;
   }
   .home__img {
     width: 300px;
