@@ -72,7 +72,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  border: rgb(25, 231, 42) solid 4px;
+  
 }
 
 h1, h2, h3 {
@@ -100,8 +100,33 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}.custom-shape-divider-top-1708186414 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}.custom-shape-divider-top-1708186613 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
+.custom-shape-divider-top-1708186613 svg {
+  position: relative;
+  display: block;
+  width: calc(139% + 1.3px);
+  height: 146px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1708186613 .shape-fill {
+  fill: #FA1818;
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 4rem 0 2rem;
@@ -189,7 +214,7 @@ img {
   text-transform: uppercase;
   font-weight: var(--font-semi-bold);
   background: var(--text-gradient);
-  color: rgb(58, 57, 57);
+  color: rgb(238, 45, 45);
   -webkit-background-clip: text;
   background-clip: text;
   transition: .4s;
@@ -484,7 +509,7 @@ summary:focus {
 .discount__container {
   position: relative;
   background-color: var(--container-color);
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: .75rem;
   
 }
@@ -492,16 +517,19 @@ summary:focus {
 .discount__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-75);
-  margin-left: 1rem;
+  
+  
 }
 
-.discount__description {
+.discount__description 
+{
   margin-bottom: var(--mb-1);
-  margin-left: 4rem;
+
 }
 
 
 /*=============== FOOTER ===============*/
+
 .footer__container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
@@ -566,7 +594,7 @@ summary:focus {
 }
 .social ul{
   width: 300px;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
 }
 
@@ -587,21 +615,30 @@ summary:focus {
   display: flex;
   justify-content: space-between;
 }
+  
 .instagram{
   border: 2px solid #ff0095;
   color: #c72b7e;
 }
-
+.instagram a{
+  color:#c72b7e;
+}
 .linkedin{
   border: 2px solid #1c9ff1;
   color: #1c9ff1;
 }
-
+.linkedin a{
+   color: #1c9ff1;
+}
 .gmail{
   border: 2px solid #ff0000;
   color: #ff0000;
   rotate: 90deg;
 }
+.gmail a{
+  color: #ff0000;
+}
+
 
 
 
@@ -697,8 +734,8 @@ li:hover .icon3{
 /* For small devices */
 @media screen and (max-width: 340px) {
   .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    margin-left: var(--mb-0-5);
+    margin-right: var(--mb-0-5);
   }
   .section__title {
     font-size: var(--big-font-size);
@@ -853,6 +890,7 @@ li:hover .icon3{
     grid-template-columns: repeat(3, 162px);
     gap: 6rem 3rem;
     padding-top: 5rem;
+    align-items: center;
   }
   .products__card {
     height: 152px;
