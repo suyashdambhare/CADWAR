@@ -506,13 +506,7 @@ summary:focus {
 }
 /* 
 /*=============== DISCOUNT ===============*/
-.discount__container {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 2rem 1.5rem;
-  border-radius: .75rem;
-  
-}
+
 
 .discount__title {
   font-size: var(--h3-font-size);
@@ -526,7 +520,25 @@ summary:focus {
   margin-bottom: var(--mb-1);
 
 }
-
+.social_icons{
+  display: flex;
+  margin-top: 2em;
+  gap: 30px;
+}
+.icon a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  color: #95979b;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0px rgb(240, 8, 8);
+  cursor: pointer;
+}
+.icon a:hover{
+  color: red;
+}
 
 /*=============== FOOTER ===============*/
 
