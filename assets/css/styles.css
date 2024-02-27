@@ -1,5 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
@@ -54,6 +57,11 @@
     --smaller-font-size: .813rem;
   }
 }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
 
 /*=============== BASE ===============*/
 * {
@@ -66,14 +74,29 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  
+  /* background-color: var(--body-color);
+  color: var(--text-color); */
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
+  
 
 h1, h2, h3 {
   color: var(--title-color);
@@ -589,7 +612,9 @@ summary:focus {
   margin-left: 5rem;
   font-size: 1rem;
 }
-
+.ul{
+  text-align: center;
+}
 .footer__social-link:hover {
   background-color: var(--black-color);
   color: #FFF;
@@ -748,6 +773,12 @@ li:hover .icon3{
   .container {
     margin-left: var(--mb-0-5);
     margin-right: var(--mb-0-5);
+    align-items: center;
+  }
+  .discount__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
   }
   .section__title {
     font-size: var(--big-font-size);
